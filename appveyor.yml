@@ -1,0 +1,29 @@
+environment:
+  VisualStudioVersion: 12.0
+  
+version: 1.0.{build}
+shallow_clone: true
+clone_depth: 1
+build:
+  project: RedGate.AppHost.sln
+  verbosity: normal
+test: off
+configuration: Release
+platform: Any CPU
+
+after_build:
+- cmd: nuget pack NuSpec\RedGate.AppHost.nuspec -NoPackageAnalysis -Version {APPVEYOR_BUILD_VERSION} -BasePath Build\Release
+
+
+artifacts:
+  - path: NuGet\*.nupkg
+    name: nupkgfiles
+
+# Publish to myget.org feed
+deploy:
+  provider: NuGet
+  server: https://www.myget.org/F/redgate-apphost-amaitland/
+  api_key:
+    secure: T3yoLSioRwXa7byUvu17t4I88RTQTvICh2j+KplLb1YVimd1IYy2m2akGqgOMJhY
+  skip_symbols: true
+  artifact: nupkgfiles
