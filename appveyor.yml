@@ -20,7 +20,7 @@ after_build:
   - cmd: nuget pack NuSpec\RedGate.AppHost.nuspec -NoPackageAnalysis -Version %APPVEYOR_BUILD_VERSION% -BasePath Build\Debug
 
 artifacts:
-  - path: *.nupkg
+  - path: .\*.nupkg
     name: nupkgfiles
 
 # Publish to myget.org feed
