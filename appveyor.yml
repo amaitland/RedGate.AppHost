@@ -8,7 +8,9 @@ build:
   project: RedGate.AppHost.sln
   verbosity: normal
 test: off
-configuration: Release
+# Unable to build a release package as snk required for package signing is not part of the project
+# configuration: Release
+configuration: Debug
 platform: Any CPU
 
 after_build:
