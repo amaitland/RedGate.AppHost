@@ -22,21 +22,21 @@
   </dependencies>
   </metadata>
   <files>
-    <file src="RedGate.AppHost.Example.Client.dll" target="lib" />
-    <file src="RedGate.AppHost.Example.Server.exe" target="lib" />
-    <file src="RedGate.AppHost.Example.Remote.Services.dll" target="lib" />
-    <file src="RedGate.AppHost.Client.exe" target="lib" />
-    <file src="RedGate.AppHost.Client.pdb" target="lib" />
-    <file src="RedGate.AppHost.Client.x64.exe" target="lib" />
-    <file src="RedGate.AppHost.Client.x64.pdb" target="lib" />
-    <file src="RedGate.AppHost.Interfaces.dll" target="lib" />
-    <file src="RedGate.AppHost.Interfaces.pdb" target="lib" />
-    <file src="RedGate.AppHost.Remoting.dll" target="lib" />
-    <file src="RedGate.AppHost.Remoting.pdb" target="lib" />
-    <file src="RedGate.AppHost.Remoting.WPF.dll" target="lib" />
-    <file src="RedGate.AppHost.Remoting.WPF.pdb" target="lib" />
-    <file src="RedGate.AppHost.Server.dll" target="lib" />
-    <file src="RedGate.AppHost.Server.pdb" target="lib" />
+    <file src="RedGate.AppHost.Example.Client.dll" target="lib\net40" />
+    <file src="RedGate.AppHost.Example.Server.exe" target="lib\net40" />
+    <file src="RedGate.AppHost.Example.Remote.Services.dll" target="lib\net40" />
+    <file src="RedGate.AppHost.Client.exe" target="lib\net40" />
+    <file src="RedGate.AppHost.Client.pdb" target="lib\net40" />
+    <file src="RedGate.AppHost.Client.x64.exe" target="lib\net40" />
+    <file src="RedGate.AppHost.Client.x64.pdb" target="lib\net40" />
+    <file src="RedGate.AppHost.Interfaces.dll" target="lib\net40" />
+    <file src="RedGate.AppHost.Interfaces.pdb" target="lib\net40" />
+    <file src="RedGate.AppHost.Remoting.dll" target="lib\net40" />
+    <file src="RedGate.AppHost.Remoting.pdb" target="lib\net40" />
+    <file src="RedGate.AppHost.Remoting.WPF.dll" target="lib\net40" />
+    <file src="RedGate.AppHost.Remoting.WPF.pdb" target="lib\net40" />
+    <file src="RedGate.AppHost.Server.dll" target="lib\net40" />
+    <file src="RedGate.AppHost.Server.pdb" target="lib\net40" />
     <file src="..\..\Install\RedGate.AppHost.wxs" target="WiX2\RedGate.AppHost.wxs" />
   </files>
 </package>
