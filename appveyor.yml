@@ -17,11 +17,10 @@ before_build:
   - nuget restore
 
 after_build:
-  - cmd: nuget pack NuSpec\RedGate.AppHost.nuspec -NoPackageAnalysis -Version %APPVEYOR_BUILD_VERSION% -BasePath Build\Release
-
+  - cmd: nuget pack NuSpec\RedGate.AppHost.nuspec -NoPackageAnalysis -Version %APPVEYOR_BUILD_VERSION% -BasePath Build\Debug
 
 artifacts:
-  - path: NuGet\*.nupkg
+  - path: NuSpec\*.nupkg
     name: nupkgfiles
 
 # Publish to myget.org feed
@@ -29,6 +28,6 @@ deploy:
   provider: NuGet
   server: https://www.myget.org/F/redgate-apphost-amaitland/
   api_key:
-    secure: T3yoLSioRwXa7byUvu17t4I88RTQTvICh2j+KplLb1YVimd1IYy2m2akGqgOMJhY
+    secure: kF/TA2hKCTTm+SinltSn5qm1q81e7wjRlk1DNgDuxBrn8IidcbFf2dy0Wo1jiyxP
   skip_symbols: true
   artifact: nupkgfiles
