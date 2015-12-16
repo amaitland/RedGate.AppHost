@@ -15,9 +15,9 @@ namespace RedGate.AppHost.Server
             m_WrappedProcessStarter = wrappedProcessStarter;
         }
 
-        public Process StartProcess(string assemblyName, string remotingId, bool openDebugConsole, bool monitorHostProcess)
+        public Process StartProcess(string assemblyName, string assemblyLocation, string remotingId, bool openDebugConsole, bool monitorHostProcess)
         {
-            var process = m_WrappedProcessStarter.StartProcess(assemblyName, remotingId, openDebugConsole, monitorHostProcess);
+            var process = m_WrappedProcessStarter.StartProcess(assemblyName, assemblyLocation, remotingId, openDebugConsole, monitorHostProcess);
 
             if (Job.CanAssignProcessToJobObject(process))
                 new Job().AssignProcessToJobObject(process);

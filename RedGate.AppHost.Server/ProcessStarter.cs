@@ -8,10 +8,10 @@ namespace RedGate.AppHost.Server
     {
         protected abstract string ProcessFileName { get; }
 
-        public Process StartProcess(string assemblyName, string remotingId, bool openDebugConsole, bool monitorHostProcess)
+        public Process StartProcess(string assemblyName, string assemblyLocation, string remotingId, bool openDebugConsole, bool monitorHostProcess)
         {
             string executingDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            string quotedAssemblyArg = "\"" + Path.Combine(executingDirectory, assemblyName) + "\"";
+            string quotedAssemblyArg = "\"" + Path.Combine(assemblyLocation, assemblyName) + "\"";
 
             var processToStart = Path.Combine(executingDirectory, ProcessFileName);
             var processArguments = string.Join(" ", new[]
